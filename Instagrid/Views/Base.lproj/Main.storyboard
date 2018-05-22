@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,35 +24,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v0-3R-1f3">
-                                <rect key="frame" x="147.66666666666666" y="30" width="118.66666666666666" height="39"/>
+                                <rect key="frame" x="128.33333333333334" y="54" width="118.66666666666666" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipup" translatesAutoresizingMaskIntoConstraints="NO" id="rom-bh-ZXF">
-                                <rect key="frame" x="199.66666666666666" y="95" width="15" height="10"/>
+                                <rect key="frame" x="180" y="119" width="15" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="SYs-Mf-mZs"/>
                                     <constraint firstAttribute="height" constant="10" id="VaW-9S-fEZ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihd-SY-sNM">
-                                <rect key="frame" x="127.00000000000001" y="113" width="160.33333333333337" height="29"/>
+                                <rect key="frame" x="107.33333333333333" y="137" width="160.33333333333337" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48W-W7-oBD">
-                                <rect key="frame" x="87" y="656" width="70" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48W-W7-oBD" customClass="MatrixView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="67.666666666666671" y="698" width="70.000000000000014" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout1" translatesAutoresizingMaskIntoConstraints="NO" id="IOP-WY-RUk">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RH-dq-MWW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RH-dq-MWW">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </button>
                                 </subviews>
@@ -67,9 +67,13 @@
                                     <constraint firstAttribute="bottom" secondItem="0RH-dq-MWW" secondAttribute="bottom" id="qzX-dy-eP9"/>
                                     <constraint firstAttribute="trailing" secondItem="IOP-WY-RUk" secondAttribute="trailing" id="uDT-xN-M4n"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="button" destination="0RH-dq-MWW" id="Fmq-IL-S05"/>
+                                    <outlet property="layout" destination="IOP-WY-RUk" id="Thc-sy-6Q2"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-AX-11X">
-                                <rect key="frame" x="172" y="656" width="70" height="70"/>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-AX-11X" customClass="MatrixView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="152.66666666666666" y="698" width="70" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout2" translatesAutoresizingMaskIntoConstraints="NO" id="oAB-GG-woS">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -93,14 +97,18 @@
                                     <constraint firstAttribute="width" constant="70" id="sHA-EF-x7C"/>
                                     <constraint firstItem="4NB-K1-naF" firstAttribute="leading" secondItem="cDw-AX-11X" secondAttribute="leading" id="sfY-oy-f1U"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="button" destination="4NB-K1-naF" id="n6Q-ZB-pcy"/>
+                                    <outlet property="layout" destination="oAB-GG-woS" id="v5q-lY-Htc"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Q1-OJ8">
-                                <rect key="frame" x="257" y="656" width="70" height="70"/>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-Q1-OJ8" customClass="MatrixView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="237.66666666666663" y="698" width="70" height="70"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout1" translatesAutoresizingMaskIntoConstraints="NO" id="huG-gv-Mpw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout3" translatesAutoresizingMaskIntoConstraints="NO" id="huG-gv-Mpw">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR1-ys-QAL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR1-ys-QAL">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     </button>
                                 </subviews>
@@ -115,25 +123,29 @@
                                     <constraint firstAttribute="bottom" secondItem="huG-gv-Mpw" secondAttribute="bottom" id="pDt-hn-fUf"/>
                                     <constraint firstAttribute="bottom" secondItem="aR1-ys-QAL" secondAttribute="bottom" id="rTI-EZ-luc"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="button" destination="aR1-ys-QAL" id="mc3-AE-CLE"/>
+                                    <outlet property="layout" destination="huG-gv-Mpw" id="zpW-zL-ii7"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMb-a8-Xam">
-                                <rect key="frame" x="40" y="150" width="334" height="334"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMb-a8-Xam" customClass="GridView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="40" y="174" width="295" height="295"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QeB-Ng-mAr">
-                                        <rect key="frame" x="8" y="8" width="318" height="318"/>
+                                        <rect key="frame" x="8" y="8" width="279" height="279"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ngR-J7-Ap3">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="155"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="135.66666666666666"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J03-Oh-d36">
-                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J03-Oh-d36" customClass="GridItemView" customModule="Instagrid" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="135.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oMQ-7w-N0F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="135.66666666666666"/>
                                                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wca-ml-EgS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="135.66666666666666"/>
                                                                 <state key="normal" image="add"/>
                                                             </button>
                                                         </subviews>
@@ -148,16 +160,20 @@
                                                             <constraint firstItem="oMQ-7w-N0F" firstAttribute="top" secondItem="J03-Oh-d36" secondAttribute="top" id="wIm-dx-4s9"/>
                                                             <constraint firstAttribute="trailing" secondItem="wca-ml-EgS" secondAttribute="trailing" id="x9c-Ov-v30"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="button" destination="wca-ml-EgS" id="dbm-C1-BIB"/>
+                                                            <outlet property="image" destination="oMQ-7w-N0F" id="1G4-UC-Mxr"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sb-7h-YkX">
-                                                        <rect key="frame" x="163" y="0.0" width="155" height="155"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sb-7h-YkX" customClass="GridItemView" customModule="Instagrid" customModuleProvider="target">
+                                                        <rect key="frame" x="143.66666666666663" y="0.0" width="135.33333333333337" height="135.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I85-Ic-Qif">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="135.66666666666666"/>
                                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkr-S8-GVR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="135.66666666666666"/>
                                                                 <state key="normal" image="add"/>
                                                             </button>
                                                         </subviews>
@@ -172,6 +188,10 @@
                                                             <constraint firstAttribute="bottom" secondItem="wkr-S8-GVR" secondAttribute="bottom" id="hk6-Rn-4Pd"/>
                                                             <constraint firstAttribute="trailing" secondItem="wkr-S8-GVR" secondAttribute="trailing" id="s1K-ZK-p9o"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="button" destination="wkr-S8-GVR" id="pYy-i4-Ik4"/>
+                                                            <outlet property="image" destination="I85-Ic-Qif" id="YFO-xa-jRV"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -184,17 +204,17 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2M5-aI-HJe">
-                                                <rect key="frame" x="0.0" y="163" width="318" height="155"/>
+                                                <rect key="frame" x="0.0" y="143.66666666666669" width="279" height="135.33333333333331"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZg-bH-WPa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="155"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZg-bH-WPa" customClass="GridItemView" customModule="Instagrid" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="279" height="135.33333333333334"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SN8-B8-aX5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="318" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="279" height="135.33333333333334"/>
                                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTJ-8Y-cvs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="318" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="279" height="135.33333333333334"/>
                                                                 <state key="normal" image="add"/>
                                                             </button>
                                                         </subviews>
@@ -209,16 +229,20 @@
                                                             <constraint firstAttribute="trailing" secondItem="nTJ-8Y-cvs" secondAttribute="trailing" id="oKp-cG-KNN"/>
                                                             <constraint firstItem="SN8-B8-aX5" firstAttribute="top" secondItem="KZg-bH-WPa" secondAttribute="top" id="zZb-w0-7lS"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="button" destination="nTJ-8Y-cvs" id="f5Y-Bw-O6R"/>
+                                                            <outlet property="image" destination="SN8-B8-aX5" id="IHN-WG-Frt"/>
+                                                        </connections>
                                                     </view>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgG-fa-Epe">
-                                                        <rect key="frame" x="318" y="0.0" width="0.0" height="155"/>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgG-fa-Epe" customClass="GridItemView" customModule="Instagrid" customModuleProvider="target">
+                                                        <rect key="frame" x="279" y="0.0" width="0.0" height="135.33333333333334"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pJq-nO-a5z">
-                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="135.33333333333334"/>
                                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cND-RW-96o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="155"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="135.33333333333334"/>
                                                                 <state key="normal" image="add"/>
                                                             </button>
                                                         </subviews>
@@ -233,6 +257,10 @@
                                                             <constraint firstAttribute="bottom" secondItem="pJq-nO-a5z" secondAttribute="bottom" id="vEx-cy-0Yh"/>
                                                             <constraint firstItem="pJq-nO-a5z" firstAttribute="top" secondItem="PgG-fa-Epe" secondAttribute="top" id="vzU-NT-5uO"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="button" destination="cND-RW-96o" id="hZo-35-9oG"/>
+                                                            <outlet property="image" destination="pJq-nO-a5z" id="aaA-JY-L1H"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -256,6 +284,12 @@
                                     <constraint firstItem="QeB-Ng-mAr" firstAttribute="top" secondItem="WMb-a8-Xam" secondAttribute="top" constant="8" id="tcE-Q8-AMw"/>
                                     <constraint firstAttribute="width" secondItem="WMb-a8-Xam" secondAttribute="height" multiplier="1:1" id="zGH-wH-mUs"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gridItemsView" destination="J03-Oh-d36" collectionClass="NSMutableArray" id="QxG-bq-cBn"/>
+                                    <outletCollection property="gridItemsView" destination="3sb-7h-YkX" collectionClass="NSMutableArray" id="plB-FK-CGs"/>
+                                    <outletCollection property="gridItemsView" destination="KZg-bH-WPa" collectionClass="NSMutableArray" id="pbj-YD-6To"/>
+                                    <outletCollection property="gridItemsView" destination="PgG-fa-Epe" collectionClass="NSMutableArray" id="GIv-dh-d3E"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392156862748" green="0.83137254901960789" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -284,6 +318,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="WMb-a8-Xam" id="NTC-i6-Jhb"/>
+                        <outletCollection property="matrixViewCollection" destination="48W-W7-oBD" collectionClass="NSMutableArray" id="t1V-95-rIe"/>
+                        <outletCollection property="matrixViewCollection" destination="cDw-AX-11X" collectionClass="NSMutableArray" id="tVO-JW-fBI"/>
+                        <outletCollection property="matrixViewCollection" destination="VZb-Q1-OJ8" collectionClass="NSMutableArray" id="Meg-EK-Omm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +333,7 @@
     <resources>
         <image name="Layout1" width="80" height="80"/>
         <image name="Layout2" width="80" height="80"/>
+        <image name="Layout3" width="80" height="80"/>
         <image name="Selected" width="80" height="80"/>
         <image name="add" width="48" height="48"/>
         <image name="img2.jpg" width="900" height="900"/>
